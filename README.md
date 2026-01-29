@@ -18,24 +18,16 @@ This project serves as a foundation for building Agentic AI applications using P
 
 ### Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd agentic_ai_with_vercel
-   ```
 
-2. **Create and activate a virtual environment:**
+1. **Create and activate a virtual environment:**
    ```bash
    python -m venv .venv
    
-   # Windows
    .venv\Scripts\activate
 
-   # macOS/Linux
-   source .venv/bin/activate
    ```
 
-3. **Install dependencies:**
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
