@@ -1,12 +1,13 @@
 # Agentic AI with Vercel
 
-This project serves as a foundation for building Agentic AI applications using Python and FastAPI, optimized for serverless deployment on Vercel.
+This project serves as a foundation for building Agentic AI applications using Python, FastAPI, and OpenAI, optimized for serverless deployment on Vercel.
 
 ## Features
 
 - **FastAPI Framework**: A modern, fast (high-performance) web framework for building APIs with Python.
 - **Vercel Deployment**: Pre-configured for seamless deployment to Vercel's serverless platform.
 - **Python 3.12+**: Leverages the latest features of Python.
+- **OpenAI Integration**: Dynamically generates welcome messages using OpenAI's `gpt-5-nano` model.
 
 ## Getting Started
 
@@ -34,13 +35,29 @@ This project serves as a foundation for building Agentic AI applications using P
 
 ## Running Locally
 
-Start the development server using Uvicorn:
+1. **Set the OpenAI API Key:**
+   
+   You need an OpenAI API key to run this application.
+   
+   **Bash:**
+   ```bash
+   export OPENAI_API_KEY=your_api_key_here
+   ```
 
-```bash
-uvicorn instant:app --reload
-```
+   **PowerShell:**
+   ```powershell
+   $env:OPENAI_API_KEY="your_api_key_here"
+   ```
 
-Open your browser and navigate to `http://localhost:8000`. You should see the message: `"Live from production!"`.
+2. **Start the development server:**
+
+   ```bash
+   uvicorn instant:app --reload
+   ```
+
+3. **Verify running application:**
+
+   Open your browser and navigate to `http://localhost:8000`. You should see an enthusiastic AI-generated announcement.
 
 ## Deployment on Vercel
 
@@ -54,6 +71,13 @@ Open your browser and navigate to `http://localhost:8000`. You should see the me
    vercel login
    vercel .
    ```
+
+3. **Configure Environment Variables:**
+
+   Since the `OPENAI_API_KEY` is not stored in the repository for security, you must add it to your Vercel project:
+   - Go to your Vercel Project Dashboard.
+   - Navigate to **Settings** > **Environment Variables**.
+   - Add a new variable named `OPENAI_API_KEY` with your OpenAI API key as the value.
 
 ## Project Structure
 
