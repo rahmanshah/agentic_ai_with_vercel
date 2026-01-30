@@ -35,29 +35,13 @@ This project serves as a foundation for building Agentic AI applications using P
 
 ## Running Locally
 
-1. **Set the OpenAI API Key:**
-   
-   You need an OpenAI API key to run this application.
-   
-   **Bash:**
-   ```bash
-   export OPENAI_API_KEY=your_api_key_here
-   ```
+Start the development server using Uvicorn:
 
-   **PowerShell:**
-   ```powershell
-   $env:OPENAI_API_KEY="your_api_key_here"
-   ```
+```bash
+uvicorn instant:app --reload
+```
 
-2. **Start the development server:**
-
-   ```bash
-   uvicorn instant:app --reload
-   ```
-
-3. **Verify running application:**
-
-   Open your browser and navigate to `http://localhost:8000`. You should see an enthusiastic AI-generated announcement.
+Open your browser and navigate to `http://localhost:8000`. You should see the message: `"Live from production!"`.
 
 ## Deployment on Vercel
 
