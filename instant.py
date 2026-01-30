@@ -14,5 +14,14 @@ Please reply with an enthusiastic announcement to welcome visitors to the site, 
     messages = [{"role": "user", "content": message}]
     response = client.chat.completions.create(model="gpt-5-nano", messages=messages)
     reply = response.choices[0].message.content.replace("\n", "<br/>")
-    html = f"<html><head><title>Live in an Instant!</title></head><body><p>{reply}</p></body></html>"
+    html = f"""
+    <html>
+        <head>
+            <title>Live in an Instant!</title>
+        </head>
+        <body style="font-family: sans-serif; padding: 40px; text-align: center;">
+            <p>{reply}</p>
+        </body>
+    </html>
+    """
     return html
